@@ -1,4 +1,5 @@
-import ReactDOM from 'react-dom'
+import {createRoot} from 'react-dom/client'
+import React from 'react'
 
 
 const App = (): JSX.Element => {
@@ -7,5 +8,5 @@ const App = (): JSX.Element => {
 }
 
 const dom = document.querySelector('#app')
-const root = ReactDOM.createRoot(dom)
-root.render(App)
+const root = createRoot(dom)
+root.render(<App />)
