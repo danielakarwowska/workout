@@ -7,6 +7,6 @@ const App = (): JSX.Element => {
     return <h1>{hello}</h1>
 }
 
-const dom = document.querySelector('#app')
+const dom = document.getElementById('app')
 const root = createRoot(dom)
 root.render(<App />)
