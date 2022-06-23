@@ -1,3 +1,6 @@
+import ReactDOM from 'react-dom'
+
+
 const App = (): JSX.Element => {
     const hello: string = 'Hello World'
     return <h1>{hello}</h1>
