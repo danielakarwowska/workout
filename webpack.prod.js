@@ -1,6 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-
+const {WebpackPluginServe: Serve} = require('webpack-plugin-serve')
 
 module.exports = () => {
     const plugins = []
@@ -14,7 +14,7 @@ module.exports = () => {
     )
 
     return {
-        mode: 'development', // production
+        mode: 'production',
         entry: [
             path.resolve(__dirname, 'src', 'app.tsx')
         ],
