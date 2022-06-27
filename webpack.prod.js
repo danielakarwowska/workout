@@ -1,6 +1,5 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const {WebpackPluginServe: Serve} = require('webpack-plugin-serve')
 
 module.exports = () => {
     const plugins = []
