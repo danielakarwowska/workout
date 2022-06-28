@@ -1,5 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlReplaceWebpackPlugin = require('html-replace-webpack-plugin')
+const nanoid = require('nanoid').nanoid
 const {WebpackPluginServe: Serve} = require('webpack-plugin-serve')
 
 module.exports = () => {
@@ -25,7 +27,16 @@ module.exports = () => {
         host: 'localhost',
         liveReload: true,
         hmr: true
-     }))
+    }))
+
+    plugins.push(new HtmlReplaceWebpackPlugin(
+        [
+           {
+              pattern: '_BUILD_',
+              replacement: nanoid(8)
+           }
+        ]
+     ))
 
     return {
         mode: 'development', // production
@@ -49,6 +60,19 @@ module.exports = () => {
                     loader: 'ts-loader',
                     exclude: [
                         /node_modules/
+                    ]
+                },
+                {
+                    test: /\.s[ac]ss$/i,
+                    use: [
+                        {
+                            loader: 'file-loader',
+                            options: {
+                                outputPath: './styles',
+                                name: '[name].min.css'
+                            }
+                        },
+                        'sass-loader'
                     ]
                 }
             ]

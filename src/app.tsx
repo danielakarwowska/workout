@@ -1,5 +1,6 @@
 import {createRoot} from 'react-dom/client'
 import React from 'react'
+import './style.scss'
 
 
 const App = (): JSX.Element => {
