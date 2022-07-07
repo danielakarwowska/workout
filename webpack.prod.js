@@ -33,6 +33,9 @@ module.exports = () => {
             path: path.resolve(__dirname, 'build'),
             filename: 'app.js'
         },
+        resolve: {
+            extensions: ['.ts', '.tsx', '.js'],
+        },
         module: {
             strictExportPresence: true,
             rules: [

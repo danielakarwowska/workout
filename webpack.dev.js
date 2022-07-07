@@ -49,6 +49,9 @@ module.exports = () => {
             path: build,
             filename: 'app.js'
         },
+        resolve: {
+            extensions: ['.ts', '.tsx', '.js'],
+        },
         watch: true,
         devtool: 'inline-source-map',
         stats: 'errors-only',
