@@ -42,7 +42,7 @@ module.exports = () => {
         mode: 'development', // production
         entry: [
             'webpack-plugin-serve/client',
-            path.resolve(__dirname, 'src', 'app.tsx')
+            path.resolve(__dirname, 'src', 'index.tsx')
         ],
         output: {
             publicPath: '',

@@ -26,7 +26,7 @@ module.exports = () => {
     return {
         mode: 'production',
         entry: [
-            path.resolve(__dirname, 'src', 'app.tsx')
+            path.resolve(__dirname, 'src', 'index.tsx')
         ],
         output: {
             publicPath: '',
